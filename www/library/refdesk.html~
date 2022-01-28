@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang=en>
+ <head>
+  <meta charset=UTF-8>
+  <meta charset=utf-8>
+  <meta name=viewport
+        content="width=device-width, initial-scale=1">
+  <link rel=stylesheet
+        href=https://cdn.simplecss.org/simple.min.css>
+  <title>Reference Desk</title>
+ </head>
+ <header>
+  <nav>
+   <a href=/library/refdesk.html>Reference Desk</a><a href=/library/genres.html>
+    Genres<a href=/library/title-sort.html>Sort by Title</a><a
+    href=/library/composer-sort.html>Sort by Composer</a><a href=../home.html>Back to 
+     Scale your Violin</a></a>
+  </nav>
+  <body>
+   <header>
+    <h1>Reference Desk</h1>
+   </header>
+   <section>
+    <h3>Welcome to the Scale your Violin Sheet Music Library.</h3>
+    <p>All music not originally by Izaak Walton or written for <a href=../home.html>
+      scaleyourviolin.com </a> is sourced from <a href=https://www.imslp.org>
+      IMSLP.org, </a> the preeminent library of public domain sheet music. I have 
+     gone through IMSLP and picked out the violin music I am most likely to recommend 
+     to students, and the editions I find most interesting or easiest to read.
+   </section>
+   <section>
+    <h5><a href=/library/title-sort.html>All Items Sorted by Title</a></h5>
+    <h5><a href=/library/composer-sort.html>All Items Sorted by Composer</a></h5>
+    <h4>Browse by Difficulty: </h4>
+    <h4>Browse by <a href=/library/genres.html>Genre:</a></h4>
+    <h5>
+     <p><a href=violin-scales.html>Violin Scales</a>
+     <p><a href=violin-technique.html>Violin Technique</a>
+     <p><a href=violin-etudes.html>Violin Etudes</a>
+     <p><a href=violin-repertoire.html>Violin Repertoire</a>
+     <p><a href=violin-theory.html>Violin Theory</a>
+     <p><a href=viola-scales.html>Viola Scales</a>
+     <p><a href=viola-technique.html>Viola Technique</a>
+     <p><a href=viola-etudes.html>Viola Etudes</a>
+     <p><a href=viola-repertoire.html>Viola Repertoire</a>
+     <p><a href=viola-theory.html>Viola Theory</a>
+     <p><a href=mandolin-repertoire.html>Mandolin Repertoire</a>
+     <p><a href=mandolin-technique.html>Mandolin Technique</a>
+     <p><a href=two-or-more.html>Two or More Instruments</a>
+    </h5>
+   </section>
+  </body>
+  <footer>
+   Scale your Violin - Copyright (c) 2021-2022<a href=www.github.com/izaakwltn>
+    Written using Common Lisp</a>
+  </footer>
+ </header>
+</html>
