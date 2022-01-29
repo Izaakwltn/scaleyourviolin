@@ -22,3 +22,4 @@
 
 (push #'lessons-page *syv-refresh-list)
       
+(push "lessons.html" *syv-wipe-list*)

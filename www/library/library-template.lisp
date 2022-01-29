@@ -73,7 +73,7 @@
 			  :direction :output
 			  :if-exists :overwrite)
     (format output "~{~a~}"
-	    (loop for i from 1 to (file-length output)
+	    (loop for i from 1 to (+ (file-length output) 2)
 		  collect " "))))
   
 (defun refresh-library-html ()

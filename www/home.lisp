@@ -28,3 +28,5 @@
 (home-page)
 
 (push #'home-page *syv-refresh-list*)
+
+(push "home.html" *syv-wipe-list*)

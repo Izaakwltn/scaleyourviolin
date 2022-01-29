@@ -41,6 +41,21 @@
 
 (defvar *syv-refresh-list* nil)
 
+(defvar *syv-wipe-list* nil)
+
+(defun wipe-syv-html-file (filename)
+  (with-open-file (output (concatenate 'string
+				       *default-file-path*
+				       "/www/"
+				       filename)
+			  :direction :output
+			  :if-exists :overwrite)
+    (format output "~{~a~}"
+	    (loop for i from 1 to (+ (file-length output) 2)
+		  collect " "))))
+
 (defun refresh-syv-html ()
+  (loop for file in *syv-wipe-list*
+	do (wipe-syv-html-file file))
   (loop for f in *syv-refresh-list*
 	do (funcall f)))

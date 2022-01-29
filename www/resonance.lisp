@@ -108,4 +108,6 @@ Sympathetic vibration occurs when the overtones of an executed note overlap with
 (resonance)
 
 (push #'resonance *syv-refresh-list*)
+
+(push "resonance.html" *syv-wipe-list*)
 ;;;;------------------------------------------------------------------------

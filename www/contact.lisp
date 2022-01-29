@@ -14,3 +14,5 @@
 (contact-page)
 
 (push #'contact-page *syv-refresh-list*)
+
+(push "contact.html" *syv-wipe-list*)

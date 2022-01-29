@@ -21,3 +21,5 @@
 (about-page)
 
 (push #'about-page *syv-refresh-list*)
+
+(push "about.html" *syv-wipe-list*)
