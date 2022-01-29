@@ -11,8 +11,15 @@
   "Selects items that have the given rating"
   (remove-if-not #'(lambda (item)
 		     (member (parse-integer (difficulty item)) rating-range))
-		 library-list))
+				  library-list))
 
+(defun sort-by-rating (pdf-list)
+  "Sorts a list of pdfs by their difficulty rating"
+  (sort (copy-list pdf-list)
+	#'(lambda (pdf1 pdf2)
+	    (< (parse-integer (difficulty pdf1))
+	       (parse-integer (difficulty pdf2))))))
+	
 ;;;;------------------------------------------------------------------------
 ;;;;Generate each difficulty page:
 ;;;;------------------------------------------------------------------------
@@ -22,7 +29,8 @@
   (loop for d in *difficulties*
 	do (generate-pdf-list-page (first d)
 				   (third d)
-				   (sift-by-rating (second d) *library-catalog*))))
+				   (sort-by-rating
+				    (sift-by-rating (second d) *library-catalog*)))))
 
 (generate-difficulties-html)
 
