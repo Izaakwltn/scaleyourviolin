@@ -27,12 +27,26 @@
 				  library-list))
 	#'(lambda (pdf1 pdf2) (string<= (composer pdf1) (composer pdf2)))))
 
+;;;;------------------------------------------------------------------------
+;;;;Generate each Genre page
+;;;;------------------------------------------------------------------------
+
 (defun generate-genres-html ()
   "Generates html file for each genre."
   (loop for g in *genres*
 	do (generate-pdf-list-page (first g)
 				   (second g)
 				   (genre-sift (first g) *library-catalog*))))
+(generate-genres-html)
+
+(push #'generate-genres-html *library-refresh-list*)
+
+(loop for i in (mapcar #'second *genres*)
+       do (push i *library-wipe-list*))
+
+;;;;------------------------------------------------------------------------
+;;;;Generate main genres page
+;;;;------------------------------------------------------------------------
 
 (defun genres-page ()
   (generate-library-html
@@ -45,13 +59,6 @@
 	   do (:p
 	       (:a :href (second g)
 		   (first g))))))))
-
-(generate-genres-html)
-
-(push #'generate-genres-html *library-refresh-list*)
-
-(loop for i in (mapcar #'second *genres*)
-      do (push i *library-wipe-list*))
 
 (genres-page)
 

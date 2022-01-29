@@ -31,7 +31,7 @@
 					   (:file "sort")
 					    ;composer-sort.html & title-sort.html
 					   (:file "genres")
-					   (:file "refdesk")))))))
+					   (:file "refdesk")
 			;		    ;scales, technique, theory, pieces, etudes
-			;		    (:file "difficulty")))))))
+					    (:file "difficulty")))))))
 			;		    ;easy, intermediate, hard, virtuoso

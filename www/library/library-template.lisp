@@ -15,13 +15,14 @@
        (:nav
 	(:a :href "../home.html"                "Back to Scale your Violin")
 	(:a :href "/library/refdesk.html"       "Reference Desk")
-	(:a :href "/library/genres.html"        "Genres"
+	(:a :href "/library/genres.html"        "Genres")
+	(:a :href "/library/difficulty.html"    "Levels")
 	(:a :href "/library/title-sort.html"    "Sort by Title")
 	(:a :href "/library/composer-sort.html" "Sort by Composer")))
       (:body ,@body)
       (:footer "Scale your Violin - Copyright (c) 2021-2022"
 	       (:a :href "www.github.com/izaakwltn"
-		   "Written using Common Lisp"))))))
+		   "Written using Common Lisp")))))
 
 (defun generate-library-html (filename html-text)
   (with-open-file (output (concatenate 'string
