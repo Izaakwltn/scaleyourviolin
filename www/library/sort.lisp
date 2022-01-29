@@ -35,7 +35,11 @@
 
 (push #'composer-sort *library-refresh-list*)
 
+(push "composer-sort.html" *library-wipe-list*)
+
 (composer-sort)
+
+;;;;------------------------------------------------------------------------
 
 (defun title-sort ()
    "Generates the Sorted by Title html file"
@@ -44,6 +48,8 @@
 			   (sort-by-title *library-catalog*)))
 	   
 (push #'title-sort *library-refresh-list*)
+
+(push "title-sort.html" *library-wipe-list*)
 
 (title-sort)
 

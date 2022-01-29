@@ -33,5 +33,7 @@
 
 (push #'refdesk *library-refresh-list*)
 
+(push "refdesk.html" *library-wipe-list*)
+
 (refdesk)
  

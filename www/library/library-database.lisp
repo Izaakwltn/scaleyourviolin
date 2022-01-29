@@ -59,7 +59,9 @@
 
 (defun update-backup (title composer genre difficulty keywords filename)
   "Add entry to library-backup.lisp"
-  (with-open-file (out "programming/lisp-projects/scaleyourviolin/www/library/library-backup.lisp"
+  (with-open-file (out (concatenate 'string
+				    *default-file-path*
+				    "/www/library/library-backup.lisp")
 		       :direction :output
 		       :if-exists :append)
     (format out

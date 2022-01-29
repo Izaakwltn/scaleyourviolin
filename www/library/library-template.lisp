@@ -25,7 +25,8 @@
 
 (defun generate-library-html (filename html-text)
   (with-open-file (output (concatenate 'string
-				       "programming/lisp-projects/scaleyourviolin/www/library/"
+				       *default-file-path*
+				       "/www/library/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite
@@ -60,10 +61,27 @@
 ;;;;------------------------------------------------------------------------
 ;;;;Refresh all library html
 ;;;;------------------------------------------------------------------------
-(defvar *library-refresh-list* nil)
+(defvar *library-refresh-list* nil) ;;;; '((filename.html generation-function))
 
+(defvar *library-wipe-list* nil)
+
+(defun wipe-library-html-file (filename)
+  (with-open-file (output (concatenate 'string
+				       *default-file-path*
+				       "/www/library/"
+				       filename)
+			  :direction :output
+			  :if-exists :overwrite)
+    (format output "~{~a~}"
+	    (loop for i from 1 to (file-length output)
+		  collect " "))))
+  
 (defun refresh-library-html ()
+  (loop for file in *library-wipe-list*
+	do (wipe-library-html-file file))
   (loop for f in *library-refresh-list*
 	do (funcall f)))
 
 (refresh-library-html);;;;do this every time a new item is added
+
+

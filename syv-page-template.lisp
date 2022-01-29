@@ -28,7 +28,7 @@
 ;;;;HTML generation
 
 (defun generate-syv-html-file (filename html-text)
-  (with-open-file (output (concatenate 'string "programming/lisp-projects/scaleyourviolin/www/"
+  (with-open-file (output (concatenate 'string "programming/lisp/scaleyourviolin/www/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite

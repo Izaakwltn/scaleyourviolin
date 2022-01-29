@@ -50,8 +50,13 @@
 
 (push #'generate-genres-html *library-refresh-list*)
 
+(loop for i in (mapcar #'second *genres*)
+      do (push i *library-wipe-list*))
+
 (genres-page)
 
 (push #'genres-page *library-refresh-list*)
+
+(push "genres.html" *library-wipe-list*)
 		  
 ;;;one function
