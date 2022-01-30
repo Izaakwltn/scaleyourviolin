@@ -29,7 +29,7 @@
   (loop for d in *difficulties*
 	do (generate-pdf-list-page (first d)
 				   (third d)
-				   (sort-by-rating
+				   (sort-by-title
 				    (sift-by-rating (second d) *library-catalog*)))))
 
 (generate-difficulties-html)
