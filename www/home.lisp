@@ -3,7 +3,7 @@
 (in-package :scaleyourviolin)
 
 (defun home-page ()
-  (generate-syv-html-file "home.html"
+  (generate-syv-html-file "index.html"
    (with-page (:title "Scale your Violin")
     (:header
      (:h1 "Scale Your Violin"))
@@ -29,4 +29,4 @@
 
 (push #'home-page *syv-refresh-list*)
 
-(push "home.html" *syv-wipe-list*)
+(push "index.html" *syv-wipe-list*)
