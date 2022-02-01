@@ -29,8 +29,8 @@
 
 (defun generate-syv-html-file (filename html-text)
   (with-open-file (output (concatenate 'string
-				       *default-file-path*
-				       "/www/"
+				      ; *default-file-path*
+				       "/home/izaakwalton/programming/lisp-projects/scaleyourviolin/www/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite
@@ -47,8 +47,8 @@
 
 (defun wipe-syv-html-file (filename)
   (with-open-file (output (concatenate 'string
-				       *default-file-path*
-				       "/www/"
+				      
+				       "/home/izaakwalton/programming/lisp-projects/scaleyourviolin/www/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite)

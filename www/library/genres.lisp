@@ -25,7 +25,7 @@
   (sort (copy-list (remove-if-not #'(lambda (pdf)
 		     (string-equal (genre pdf) genre-string))
 				  library-list))
-	#'(lambda (pdf1 pdf2) (string<= (composer pdf1) (composer pdf2)))))
+	#'(lambda (pdf1 pdf2) (string<= (title pdf1) (title pdf2)))))
 
 ;;;;------------------------------------------------------------------------
 ;;;;Generate each Genre page

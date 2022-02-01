@@ -26,8 +26,8 @@
 
 (defun generate-library-html (filename html-text)
   (with-open-file (output (concatenate 'string
-				       *default-file-path*
-				       "/www/library/"
+				       ;*default-file-path*
+				       "/home/izaakwalton/programming/lisp-projects/scaleyourviolin/www/library/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite
@@ -68,8 +68,8 @@
 
 (defun wipe-library-html-file (filename)
   (with-open-file (output (concatenate 'string
-				       *default-file-path*
-				       "/www/library/"
+				       ;*default-file-path*
+				       "/home/izaakwalton/programming/lisp-projects/scaleyourviolin/www/library/"
 				       filename)
 			  :direction :output
 			  :if-exists :overwrite)
